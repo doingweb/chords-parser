@@ -1,8 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "declaration": true,
     "module": "commonjs",
-    "outDir": "out",
-    "sourceMap": true
-  }
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/__mocks__/*"
+  ]
 }

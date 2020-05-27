@@ -29,9 +29,7 @@ This is where the lyrics would go
 
 song
   : songLines
-    {return {
-      lines: $1
-    };}
+    {return $1}
   ;
 songLines
   : songLine
@@ -47,41 +45,27 @@ songLine
   ;
 chordLine
   : chords EOL
-    {$$ = {
-      type: 'chords',
-      chords: $1
-    }}
+    {$$ = new yy.ChordLine($1)}
   ;
 chords
-  : chords chord
-    {$$ = [...$1, $2]}
-  | chord
+  : chord
     {$$ = [$1]}
+  | chords chord
+    {$$ = [...$1, $2]}
   ;
 chord
   : CHORD
-    {$$ = {
-      type: 'chord',
-      position: @1.first_column,
-      value: $1
-    }}
+    {$$ = new yy.Chord($1, @1.first_column)}
   ;
 lyricLine
   : LYRICS EOL
-    {$$ = {
-      type: 'lyrics',
-      offset: @1.first_column,
-      value: $1
-    }}
+    {$$ = new yy.Lyric($1, @1.first_column)}
   ;
 sectionHeading
   : SECTION_HEADING EOL
-    {$$ = {
-      type: 'heading',
-      value: /\[(.*)\]/.exec($1)[1]
-    }}
+    {$$ = new yy.SectionHeading(/\[(.*)\]/.exec($1)[1])}
   ;
 emptyLine
   : EOL
-    {$$ = { type: 'emptyLine' }}
+    {$$ = new yy.EmptyLine()}
   ;

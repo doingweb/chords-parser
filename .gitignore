@@ -2,4 +2,7 @@
 /node_modules
 
 # TypeScript compiler
-/out
+/dist
+
+# Yarn
+yarn-error.log

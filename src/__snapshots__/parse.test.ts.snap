@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic examples empty 1`] = `
+Song {
+  "lines": Array [
+    EmptyLine {
+      "type": "empty",
+    },
+  ],
+  "originalText": "",
+}
+`;
+
+exports[`basic examples just a heading 1`] = `
+Song {
+  "lines": Array [
+    SectionHeading {
+      "content": "Verse",
+      "type": "heading",
+    },
+  ],
+  "originalText": "[Verse]",
+}
+`;
+
+exports[`basic examples just chords 1`] = `
+Song {
+  "lines": Array [
+    ChordLine {
+      "chords": Array [
+        Chord {
+          "content": "C",
+          "position": 0,
+        },
+        Chord {
+          "content": "Cmaj7",
+          "position": 2,
+        },
+        Chord {
+          "content": "Am",
+          "position": 8,
+        },
+        Chord {
+          "content": "F",
+          "position": 11,
+        },
+        Chord {
+          "content": "G",
+          "position": 13,
+        },
+      ],
+      "type": "chords",
+    },
+  ],
+  "originalText": "C Cmaj7 Am F G",
+}
+`;
+
+exports[`basic examples just lyrics 1`] = `
+Song {
+  "lines": Array [
+    Lyric {
+      "content": "test test test",
+      "offset": 0,
+      "type": "lyric",
+    },
+  ],
+  "originalText": "test test test",
+}
+`;
+
+exports[`fixtures readme-example.txt 1`] = `
+Song {
+  "lines": Array [
+    SectionHeading {
+      "content": "Verse",
+      "type": "heading",
+    },
+    ChordLine {
+      "chords": Array [
+        Chord {
+          "content": "G",
+          "position": 0,
+        },
+        Chord {
+          "content": "C",
+          "position": 8,
+        },
+        Chord {
+          "content": "D",
+          "position": 18,
+        },
+        Chord {
+          "content": "G",
+          "position": 31,
+        },
+      ],
+      "type": "chords",
+    },
+    Lyric {
+      "content": "This is where the lyrics would go",
+      "offset": 0,
+      "type": "lyric",
+    },
+    EmptyLine {
+      "type": "empty",
+    },
+  ],
+  "originalText": "[Verse]
+G       C         D            G
+This is where the lyrics would go
+",
+}
+`;

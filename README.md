@@ -17,47 +17,50 @@ Parses as:
 {
   "lines": [
     {
+      "content": "Verse",
       "type": "heading",
-      "value": "Verse",
     },
     {
       "chords": [
         {
+          "content": "G",
           "position": 0,
-          "type": "chord",
-          "value": "G",
         },
         {
+          "content": "C",
           "position": 8,
-          "type": "chord",
-          "value": "C",
         },
         {
+          "content": "D",
           "position": 18,
-          "type": "chord",
-          "value": "D",
         },
         {
+          "content": "G",
           "position": 31,
-          "type": "chord",
-          "value": "G",
         },
       ],
       "type": "chords",
     },
     {
+      "content": "This is where the lyrics would go",
       "offset": 0,
-      "type": "lyrics",
-      "value": "This is where the lyrics would go",
-    }
-  ]
+      "type": "lyric",
+    },
+    {
+      "type": "empty",
+    },
+  ],
+  "originalText": "[Verse]
+G       C         D            G
+This is where the lyrics would go
+",
 }
 ```
 
 TODO
 ----
 
-* Proper API w/Types
-* Rewrite tests for new API
-* Tests for multiline inputs
+* More fixtures
 * Run some more real songs through it to find bugs
+* Add a `parseFile()` that accepts a filename?
+  * Specify frontmatter as a custom metadata format?
