@@ -1,8 +1,8 @@
-import Chord from './Chord';
-import SongLine from './SongLine';
+import Chord from "./Chord.ts";
+import SongLine from "./SongLine.ts";
 
 export default class ChordLine implements SongLine {
-  type = 'chords';
+  type = "chords";
 
   constructor(public chords: Array<Chord>) {}
 }

@@ -1,7 +1,7 @@
-import SongLine from './SongLine';
+import SongLine from "./SongLine.ts";
 
 export default class Lyric implements SongLine {
-  type = 'lyric';
+  type = "lyric";
 
   constructor(public content: string, public offset: number) {}
 }

@@ -1,7 +1,7 @@
-import SongLine from './SongLine';
+import SongLine from "./SongLine.ts";
 
 export default class SectionHeading implements SongLine {
-  type = 'heading';
+  type = "heading";
 
   constructor(public content: string) {}
 }
