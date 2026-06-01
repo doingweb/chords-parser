@@ -1,17 +1,11 @@
 # Build output
 dist/
 
-# Node (used only for the one-time golden capture)
+# npm deps (Deno may materialize node_modules when resolving npm: build deps)
 node_modules/
 
 # Deno
 coverage/
-
-# Temporary golden-reference scaffolding (removed in final cleanup)
-/golden.json
-
-# Legacy yarn (removed in final cleanup)
-yarn-error.log
 
 # OS
 .DS_Store

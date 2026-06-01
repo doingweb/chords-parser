@@ -16,12 +16,14 @@
   },
   "fmt": {
     "exclude": [
+      "docs/",
       "src/grammar/parser.generated.js",
       "src/grammar/parser.generated.d.ts"
     ]
   },
   "lint": {
     "exclude": [
+      "docs/",
       "src/grammar/parser.generated.js",
       "src/grammar/parser.generated.d.ts"
     ]
