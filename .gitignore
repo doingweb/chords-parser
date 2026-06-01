@@ -1,8 +1,17 @@
-# Node.js
-/node_modules
+# Build output
+dist/
 
-# TypeScript compiler
-/dist
+# Node (used only for the one-time golden capture)
+node_modules/
 
-# Yarn
+# Deno
+coverage/
+
+# Temporary golden-reference scaffolding (removed in final cleanup)
+/golden.json
+
+# Legacy yarn (removed in final cleanup)
 yarn-error.log
+
+# OS
+.DS_Store

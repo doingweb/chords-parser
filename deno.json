@@ -1,0 +1,17 @@
+{
+  "name": "@doingweb/chords-parser",
+  "version": "0.1.0",
+  "exports": "./src/index.ts",
+  "tasks": {
+    "codegen": "deno run --allow-read --allow-write --allow-net scripts/codegen.ts",
+    "test": "deno test --allow-read",
+    "test:update": "deno test --allow-read --allow-write -- --update",
+    "fmt": "deno fmt",
+    "lint": "deno lint",
+    "check": "deno fmt --check && deno lint && deno check src/index.ts && deno test --allow-read"
+  },
+  "imports": {
+    "@std/testing": "jsr:@std/testing@^1",
+    "peggy": "npm:peggy@^5"
+  }
+}
