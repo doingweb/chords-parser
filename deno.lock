@@ -1,6 +1,7 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/assert@1": "1.0.11",
     "jsr:@std/assert@^1.0.10": "1.0.11",
     "jsr:@std/fs@^1.0.9": "1.0.24",
     "jsr:@std/internal@^1.0.14": "1.0.14",
@@ -12,7 +13,10 @@
   },
   "jsr": {
     "@std/assert@1.0.11": {
-      "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1"
+      "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
+      "dependencies": [
+        "jsr:@std/internal@^1.0.5"
+      ]
     },
     "@std/fs@1.0.24": {
       "integrity": "f3061b45b81673a2bece689da041df32d174be064c89eb6397fb5718d3fb7877",
@@ -32,7 +36,7 @@
     "@std/testing@1.0.9": {
       "integrity": "9bdd4ac07cb13e7594ac30e90f6ceef7254ac83a9aeaa089be0008f33aab5cd4",
       "dependencies": [
-        "jsr:@std/assert",
+        "jsr:@std/assert@^1.0.10",
         "jsr:@std/fs",
         "jsr:@std/internal@^1.0.5",
         "jsr:@std/path@^1.0.8"
@@ -68,6 +72,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/assert@1",
       "jsr:@std/testing@1",
       "npm:peggy@5"
     ]

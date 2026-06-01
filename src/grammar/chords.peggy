@@ -7,9 +7,16 @@
   import SectionHeading from "../lib/SectionHeading.ts";
   import EmptyLine from "../lib/EmptyLine.ts";
 
-  // Canonical chord token, ported verbatim from the original Jison lexer rule:
-  //   \b[A-G][b#]?((m(aj)?)?(2|4|5|6|7)?(add(2|4|9))?)?\b
-  const CHORD = /^[A-G][b#]?((m(aj)?)?(2|4|5|6|7)?(add(2|4|9))?)?$/;
+  // Chord token: a root note (+ accidental), then any run of quality/extension/
+  // alteration modifiers, then an optional slash bass note. Covers maj/min/sus/
+  // add/dim/aug, extensions (6/7/9/11/13), altered tones (b5/#5/b9/#9...), and
+  // slash chords (G/B, D/F#). Anchored, so a token must be a chord in full.
+  const NOTE = "[A-G][b#]?";
+  const CHORD = new RegExp(
+    "^" + NOTE +
+      "(?:maj|min|sus2|sus4|sus|add|dim|aug|°|M|m|\\+|6/9|[b#]\\d+|\\d+|\\([^)]*\\))*" +
+      "(?:/" + NOTE + ")?$",
+  );
 }}
 
 // A song is zero or more newline-terminated lines followed by one final line
@@ -38,14 +45,14 @@ chord
     { return new Chord(word, location().start.column - 1); }
 
 headingContent
-  = "[" inner:$[^\]\n]* "]" inlineWs* &lineEnd
+  = "[" inner:$[^\]\r\n]* "]" inlineWs* &lineEnd
     { return new SectionHeading(inner); }
 
 lyricContent
   = inlineWs* lyric:lyricText &lineEnd { return lyric; }
 
 lyricText
-  = text:$[^\n]+ { return new Lyric(text, location().start.column - 1); }
+  = text:$[^\r\n]+ { return new Lyric(text, location().start.column - 1); }
 
 emptyContent
   = inlineWs* &lineEnd { return new EmptyLine(); }

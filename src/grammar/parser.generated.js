@@ -12,9 +12,16 @@
   import SectionHeading from "../lib/SectionHeading.ts";
   import EmptyLine from "../lib/EmptyLine.ts";
 
-  // Canonical chord token, ported verbatim from the original Jison lexer rule:
-  //   \b[A-G][b#]?((m(aj)?)?(2|4|5|6|7)?(add(2|4|9))?)?\b
-  const CHORD = /^[A-G][b#]?((m(aj)?)?(2|4|5|6|7)?(add(2|4|9))?)?$/;
+  // Chord token: a root note (+ accidental), then any run of quality/extension/
+  // alteration modifiers, then an optional slash bass note. Covers maj/min/sus/
+  // add/dim/aug, extensions (6/7/9/11/13), altered tones (b5/#5/b9/#9...), and
+  // slash chords (G/B, D/F#). Anchored, so a token must be a chord in full.
+  const NOTE = "[A-G][b#]?";
+  const CHORD = new RegExp(
+    "^" + NOTE +
+      "(?:maj|min|sus2|sus4|sus|add|dim|aug|°|M|m|\\+|6/9|[b#]\\d+|\\d+|\\([^)]*\\))*" +
+      "(?:/" + NOTE + ")?$",
+  );
 
 class peg$SyntaxError extends SyntaxError {
   constructor(message, expected, found, location) {
@@ -182,8 +189,8 @@ function peg$parse(input, options) {
   const peg$c2 = "[";
   const peg$c3 = "]";
 
-  const peg$r0 = /^[^\]\n]/;
-  const peg$r1 = /^[^\n]/;
+  const peg$r0 = /^[^\]\r\n]/;
+  const peg$r1 = /^[^\r\n]/;
   const peg$r2 = /^[^ \t\r\n]/;
   const peg$r3 = /^[ \t]/;
 
@@ -191,9 +198,9 @@ function peg$parse(input, options) {
   const peg$e1 = peg$literalExpectation("\n", false);
   const peg$e2 = peg$anyExpectation();
   const peg$e3 = peg$literalExpectation("[", false);
-  const peg$e4 = peg$classExpectation(["]", "\n"], true, false, false);
+  const peg$e4 = peg$classExpectation(["]", "\r", "\n"], true, false, false);
   const peg$e5 = peg$literalExpectation("]", false);
-  const peg$e6 = peg$classExpectation(["\n"], true, false, false);
+  const peg$e6 = peg$classExpectation(["\r", "\n"], true, false, false);
   const peg$e7 = peg$classExpectation([" ", "\t", "\r", "\n"], true, false, false);
   const peg$e8 = peg$classExpectation([" ", "\t"], false, false, false);
 
