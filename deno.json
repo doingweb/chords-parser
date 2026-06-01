@@ -13,5 +13,17 @@
   "imports": {
     "@std/testing": "jsr:@std/testing@^1",
     "peggy": "npm:peggy@^5"
+  },
+  "fmt": {
+    "exclude": [
+      "src/grammar/parser.generated.js",
+      "src/grammar/parser.generated.d.ts"
+    ]
+  },
+  "lint": {
+    "exclude": [
+      "src/grammar/parser.generated.js",
+      "src/grammar/parser.generated.d.ts"
+    ]
   }
 }
