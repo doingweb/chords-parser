@@ -1,0 +1,1209 @@
+export const snapshot = {};
+
+snapshot[`basic: just chords 1`] = `
+Song {
+  lines: [
+    ChordLine {
+      chords: [
+        Chord {
+          content: "C",
+          position: 0,
+        },
+        Chord {
+          content: "Cmaj7",
+          position: 2,
+        },
+        Chord {
+          content: "Am",
+          position: 8,
+        },
+        Chord {
+          content: "F",
+          position: 11,
+        },
+        Chord {
+          content: "G",
+          position: 13,
+        },
+      ],
+      type: "chords",
+    },
+  ],
+  originalText: "C Cmaj7 Am F G",
+}
+`;
+
+snapshot[`basic: just lyrics 1`] = `
+Song {
+  lines: [
+    Lyric {
+      content: "test test test",
+      offset: 0,
+      type: "lyric",
+    },
+  ],
+  originalText: "test test test",
+}
+`;
+
+snapshot[`basic: just a heading 1`] = `
+Song {
+  lines: [
+    SectionHeading {
+      content: "Verse",
+      type: "heading",
+    },
+  ],
+  originalText: "[Verse]",
+}
+`;
+
+snapshot[`basic: empty 1`] = `
+Song {
+  lines: [
+    EmptyLine {
+      type: "empty",
+    },
+  ],
+  originalText: "",
+}
+`;
+
+snapshot[`fixture: readme-example.txt 1`] = `
+Song {
+  lines: [
+    SectionHeading {
+      content: "Verse",
+      type: "heading",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "G",
+          position: 0,
+        },
+        Chord {
+          content: "C",
+          position: 8,
+        },
+        Chord {
+          content: "D",
+          position: 18,
+        },
+        Chord {
+          content: "G",
+          position: 31,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "This is where the lyrics would go",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+  ],
+  originalText: "[Verse]
+G       C         D            G
+This is where the lyrics would go
+",
+}
+`;
+
+snapshot[`fixture: Andrew Bird - Tables and Chairs.txt 1`] = `
+Song {
+  lines: [
+    SectionHeading {
+      content: "Intro",
+      type: "heading",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 3,
+        },
+        Chord {
+          content: "G",
+          position: 40,
+        },
+        Chord {
+          content: "D",
+          position: 59,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "If we can call them friends then we can call them on their telephones",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 0,
+        },
+        Chord {
+          content: "G",
+          position: 40,
+        },
+        Chord {
+          content: "D",
+          position: 61,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And they won't pretend that they're too busy or that they're not alone",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "A",
+          position: 7,
+        },
+        Chord {
+          content: "G",
+          position: 44,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And if we can call them friends then we can call",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "A",
+          position: 0,
+        },
+        Chord {
+          content: "G",
+          position: 35,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Holler at them down these hallowed halls",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "A",
+          position: 0,
+        },
+        Chord {
+          content: "Bm",
+          position: 32,
+        },
+        Chord {
+          content: "G",
+          position: 45,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Just don't let the human factor fail to be a factor",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 3,
+        },
+        Chord {
+          content: "Dadd4",
+          position: 6,
+        },
+        Chord {
+          content: "D",
+          position: 13,
+        },
+        Chord {
+          content: "Dadd4",
+          position: 16,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "At all",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    SectionHeading {
+      content: "Verse",
+      type: "heading",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Dadd4",
+          position: 17,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Don't, don't you worry",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 10,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "About the atmosphere",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dadd4",
+          position: 3,
+        },
+        Chord {
+          content: "D",
+          position: 23,
+        },
+        Chord {
+          content: "Dadd4",
+          position: 30,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Or any sudden pressure change",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 10,
+        },
+        Chord {
+          content: "Dadd4",
+          position: 29,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Because I know that it's starting",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 7,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "To get warm in here",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dadd4",
+          position: 4,
+        },
+        Chord {
+          content: "D",
+          position: 31,
+        },
+        Chord {
+          content: "Dadd4",
+          position: 39,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And things are starting to get strange",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 8,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 12,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And did you",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 8,
+        },
+        Chord {
+          content: "G",
+          position: 15,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Did you see how",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 11,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 30,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "All of our friends were there",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 12,
+        },
+        Chord {
+          content: "G",
+          position: 21,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And they're drinking",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 15,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 20,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "roses from the can?",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 0,
+        },
+        Chord {
+          content: "G",
+          position: 8,
+        },
+      ],
+      type: "chords",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 4,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 8,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And how",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 6,
+        },
+        Chord {
+          content: "G",
+          position: 13,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "How I wish I",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 6,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 21,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "I had talked to them",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 6,
+        },
+        Chord {
+          content: "G",
+          position: 16,
+        },
+        Chord {
+          content: "D",
+          position: 29,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And I wish they fit into the plan",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    SectionHeading {
+      content: "Chorus",
+      type: "heading",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "D",
+          position: 2,
+        },
+        Chord {
+          content: "Bb",
+          position: 4,
+        },
+        Chord {
+          content: "A",
+          position: 7,
+        },
+      ],
+      type: "chords",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "D",
+          position: 2,
+        },
+        Chord {
+          content: "Bb",
+          position: 4,
+        },
+        Chord {
+          content: "A",
+          position: 7,
+        },
+      ],
+      type: "chords",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Bb",
+          position: 14,
+        },
+        Chord {
+          content: "A",
+          position: 29,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And we were tired of being mild",
+      offset: 2,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Bb",
+          position: 13,
+        },
+        Chord {
+          content: "A",
+          position: 28,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "We were so tired of being mild",
+      offset: 2,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Bb",
+          position: 9,
+        },
+        Chord {
+          content: "A",
+          position: 14,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And we were tired",
+      offset: 2,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    SectionHeading {
+      content: "Verse",
+      type: "heading",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 22,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "I know we're going to meet some day",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dmaj7add4",
+          position: 7,
+        },
+        Chord {
+          content: "Bm",
+          position: 31,
+        },
+        Chord {
+          content: "G",
+          position: 52,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "In the crumbled financial institutions of this land",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 14,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "There will be tables and chairs",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dmaj7add4",
+          position: 12,
+        },
+        Chord {
+          content: "Bm",
+          position: 35,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "There'll be pony rides and dancing bears",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "G",
+          position: 19,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "There'll even be a band",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 14,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Cause listen, after the fall",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dmaj7add4",
+          position: 14,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "There will be no more countries",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 3,
+        },
+        Chord {
+          content: "G",
+          position: 21,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "No currencies at all",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 12,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "We're gonna live on our wits",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dmaj7add4",
+          position: 12,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "We're gonna throw away survival kits",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 6,
+        },
+        Chord {
+          content: "G",
+          position: 27,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Trade butterfly-knives for Adderall",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 11,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And that's not all!",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Dmaj7add4",
+          position: 2,
+        },
+        Chord {
+          content: "Bm",
+          position: 18,
+        },
+        Chord {
+          content: "G",
+          position: 37,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Oh, there will be snacks, there will",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 14,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 32,
+        },
+        Chord {
+          content: "Bm",
+          position: 42,
+        },
+        Chord {
+          content: "G",
+          position: 45,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "There will be snacks, there will be",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    Lyric {
+      content: "There will be snacks",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 2,
+        },
+        Chord {
+          content: "Bm",
+          position: 12,
+        },
+        Chord {
+          content: "G",
+          position: 15,
+        },
+      ],
+      type: "chords",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 2,
+        },
+        Chord {
+          content: "Bm",
+          position: 12,
+        },
+        Chord {
+          content: "G",
+          position: 15,
+        },
+      ],
+      type: "chords",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Bb",
+          position: 14,
+        },
+        Chord {
+          content: "A",
+          position: 29,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And we were tired of being mild",
+      offset: 2,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Bb",
+          position: 13,
+        },
+        Chord {
+          content: "A",
+          position: 28,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "We were so tired of being mild",
+      offset: 2,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 0,
+        },
+        Chord {
+          content: "Bb",
+          position: 9,
+        },
+        Chord {
+          content: "A",
+          position: 27,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "And we were (we were so) tired",
+      offset: 2,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 3,
+        },
+        Chord {
+          content: "Dmaj7add4",
+          position: 13,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "So don't you",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "Bm",
+          position: 10,
+        },
+        Chord {
+          content: "G",
+          position: 16,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "Don't you worry",
+      offset: 0,
+      type: "lyric",
+    },
+    ChordLine {
+      chords: [
+        Chord {
+          content: "D",
+          position: 14,
+        },
+      ],
+      type: "chords",
+    },
+    Lyric {
+      content: "About the atmosphere",
+      offset: 0,
+      type: "lyric",
+    },
+    EmptyLine {
+      type: "empty",
+    },
+  ],
+  originalText: "[Intro]
+   Bm                                   G                  D
+If we can call them friends then we can call them on their telephones
+Bm                                      G                    D
+And they won't pretend that they're too busy or that they're not alone
+       A                                    G
+And if we can call them friends then we can call
+A                                  G
+Holler at them down these hallowed halls
+A                               Bm           G
+Just don't let the human factor fail to be a factor
+   D  Dadd4  D  Dadd4
+At all
+
+[Verse]
+D                Dadd4
+Don't, don't you worry
+          D
+About the atmosphere
+   Dadd4               D      Dadd4
+Or any sudden pressure change
+          D                  Dadd4
+Because I know that it's starting
+       D
+To get warm in here
+    Dadd4                      D       Dadd4
+And things are starting to get strange
+
+        D   Dmaj7add4
+And did you
+        Bm     G
+Did you see how
+           D                  Dmaj7add4
+All of our friends were there
+            Bm       G
+And they're drinking
+               D    Dmaj7add4
+roses from the can?
+Bm      G
+
+    D   Dmaj7add4
+And how
+      Bm     G
+How I wish I
+      D              Dmaj7add4
+I had talked to them
+      Bm        G            D
+And I wish they fit into the plan
+
+[Chorus]
+D D Bb A
+D D Bb A
+
+D             Bb             A
+  And we were tired of being mild
+D            Bb             A
+  We were so tired of being mild
+D        Bb   A
+  And we were tired
+
+[Verse]
+                      D
+I know we're going to meet some day
+       Dmaj7add4               Bm                   G
+In the crumbled financial institutions of this land
+              D
+There will be tables and chairs
+            Dmaj7add4              Bm
+There'll be pony rides and dancing bears
+                   G
+There'll even be a band
+
+              D
+Cause listen, after the fall
+              Dmaj7add4
+There will be no more countries
+   Bm                G
+No currencies at all
+            D
+We're gonna live on our wits
+            Dmaj7add4
+We're gonna throw away survival kits
+      Bm                   G
+Trade butterfly-knives for Adderall
+
+           D
+And that's not all!
+  Dmaj7add4       Bm                 G
+Oh, there will be snacks, there will
+              D                 Dmaj7add4 Bm G
+There will be snacks, there will be
+
+There will be snacks
+
+D Dmaj7add4 Bm G
+D Dmaj7add4 Bm G
+
+D             Bb             A
+  And we were tired of being mild
+D            Bb             A
+  We were so tired of being mild
+D        Bb                A
+  And we were (we were so) tired
+
+   D         Dmaj7add4
+So don't you
+          Bm    G
+Don't you worry
+              D
+About the atmosphere
+",
+}
+`;
