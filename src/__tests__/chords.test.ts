@@ -12,6 +12,7 @@ Deno.test("recognizes extended chord vocabulary as chord lines", () => {
     "D/F# A/C# F#7/Bb Eb/D",
     "Cmaj7 Bm11 G9 C#dim Eaug",
     "Gm6/D D5/A Cadd9 D7sus2",
+    "D A Bm E Em A (F#)", // optional/passing chord in parentheses
   ];
   for (const line of chordLines) {
     assertEquals(firstLineType(line + "\n"), "chords", line);

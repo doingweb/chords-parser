@@ -17,11 +17,12 @@
   // add/dim/aug, extensions (6/7/9/11/13), altered tones (b5/#5/b9/#9...), and
   // slash chords (G/B, D/F#). Anchored, so a token must be a chord in full.
   const NOTE = "[A-G][b#]?";
-  const CHORD = new RegExp(
-    "^" + NOTE +
-      "(?:maj|min|sus2|sus4|sus|add|dim|aug|°|M|m|\\+|6/9|[b#]\\d+|\\d+|\\([^)]*\\))*" +
-      "(?:/" + NOTE + ")?$",
-  );
+  const CORE = NOTE +
+    "(?:maj|min|sus2|sus4|sus|add|dim|aug|°|M|m|\\+|6/9|[b#]\\d+|\\d+|\\([^)]*\\))*" +
+    "(?:/" + NOTE + ")?";
+  // A chord token, optionally wrapped in parentheses to mark an
+  // optional/passing chord, e.g. "(F#)".
+  const CHORD = new RegExp("^(?:" + CORE + "|\\(" + CORE + "\\))$");
 
 class peg$SyntaxError extends SyntaxError {
   constructor(message, expected, found, location) {
